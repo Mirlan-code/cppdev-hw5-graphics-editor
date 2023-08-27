@@ -1,9 +1,12 @@
-#include "lib.h"
+#include "primitive.h"
+#include "vector_graphics_editor.h"
 
 #include <iostream>
 
 int main (int, char **) {
-    std::cout << "Version: " << version() << std::endl;
-    std::cout << "Hello, world!" << std::endl;
+    VectorGraphicsEditor vectorGraphicsEditor;
+    auto& vectorImage = vectorGraphicsEditor.CreateNewImage();
+    vectorImage.AddPrimitive({});
+    vectorImage.AddPrimitive(Point(1, 2, Color(1)));
     return 0;
 }
